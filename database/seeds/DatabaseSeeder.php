@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
         $limit = 20; //batasan berapa banyak data
         for ($i = 0; $i < $limit; $i++) {
             DB::table('barang')->insert([ //mengisi datadi database
-                'nama_barang' => $faker->name, //email unique sehingga tidak ada yang sama
+                'nama_barang' => $faker->title, //email unique sehingga tidak ada yang sama
                 'stok' => $i,
-                'address_picture' => $faker->name,
+                'address_picture' => $faker->address,
             ]);
         }
     }
