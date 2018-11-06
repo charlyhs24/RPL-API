@@ -20,14 +20,14 @@ class PeminjamanController extends Controller
         $data->url_ktm = $request->json('url_ktm');
         $data->status_pengajuan = "sedang diproses";
         $data->save();
-        $data_barang = $request->json('data_barang');
-        foreach ($data_barang as $tmp) {
-            DB::table('pinjaman_detail')->insert([
-                'id_pinjaman' => $data->id_pinjaman, 
-                'id_barang' => $tmp['id_barang'],
-                'jumlah_pinjam'=> $tmp['jumlah_pinjam']
-            ]);            
-        }
+        // $data_barang = $request->json('data_barang');
+        // foreach ($data_barang as $tmp) {
+        //     DB::table('pinjaman_detail')->insert([
+        //         'id_pinjaman' => $data->id_pinjaman, 
+        //         'id_barang' => $tmp['id_barang'],
+        //         'jumlah_pinjam'=> $tmp['jumlah_pinjam']
+        //     ]);            
+        // }
         return response("data peminjaman berhasil disimpan",200);
     }
     public function pengajuan(){
