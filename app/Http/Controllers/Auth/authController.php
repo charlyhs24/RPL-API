@@ -25,7 +25,7 @@ class authController extends Controller
     }
     public function signin(Request $request){
         // grab credentials from the request
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->json('username', 'password');
         dd($credentials);
         try {
             // attempt to verify the credentials and create a token for the user
