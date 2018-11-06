@@ -11,7 +11,6 @@ class authController extends Controller
 {
     //
     public function signup(Request $request){
-        // dd("ah");
         $this->validate($request,[
             'username' => 'required',
             'email' => 'required|unique:users',
@@ -27,7 +26,7 @@ class authController extends Controller
     public function signin(Request $request){
         // grab credentials from the request
         $credentials = $request->only('username', 'password');
-
+        dd($credentials);
         try {
             // attempt to verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($credentials)) {
