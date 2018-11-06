@@ -23,7 +23,6 @@ class CreatePinjamanTable extends Migration
             $table->string('url_surat');
             $table->string('url_Ktm');
             $table->string('status_pengajuan');
-                
             $table->timestamps();
         });
     }
