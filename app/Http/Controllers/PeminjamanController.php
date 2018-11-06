@@ -20,6 +20,7 @@ class PeminjamanController extends Controller
         $data->url_ktm = $request->json('url_ktm');
         $data->status_pengajuan = "sedang diproses";
         $data->save();
+        dd($data);
         // $data_barang = $request->json('data_barang');
         // foreach ($data_barang as $tmp) {
         //     DB::table('pinjaman_detail')->insert([
