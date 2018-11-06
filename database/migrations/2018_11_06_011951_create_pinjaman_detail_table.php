@@ -15,7 +15,7 @@ class CreatePinjamanDetailTable extends Migration
     {
         Schema::create('pinjaman_detail', function (Blueprint $table) {
             $table->increments('id_pinjaman_detail');
-            $table->integer('id_pinjam');
+            $table->integer('id_pinjaman');
             $table->integer('id_barang');
             $table->integer('jumlah_pinjam');
         });
