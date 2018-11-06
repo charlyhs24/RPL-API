@@ -21,7 +21,7 @@ class CreatePinjamanTable extends Migration
             $table->string('tanggal_peminjaman');
             $table->string('status');
             $table->string('url_surat');
-            $table->string('url_Ktm');
+            $table->string('url_ktm');
             $table->string('status_pengajuan');
             $table->timestamps();
         });
