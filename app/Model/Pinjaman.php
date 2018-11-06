@@ -9,5 +9,4 @@ class Pinjaman extends Model
     //
     protected $table = 'pinjaman';
     protected $primaryKey = 'id_pinjaman'; 
-    protected $incrementing = true;
 }
