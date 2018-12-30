@@ -18,6 +18,7 @@ class CreatePinjamanDetailTable extends Migration
             $table->integer('id_pinjaman');
             $table->integer('id_barang');
             $table->integer('jumlah_pinjam');
+            $table->string('status');
         });
     }
 

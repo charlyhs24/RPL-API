@@ -21,12 +21,12 @@ class BarangController extends Controller
         $data->address_picture = $request->json('address_picture');
         $data->save();
         // dd($data);
-        return response('data barang berhasil disimpan');
+        return response()->json('data barang berhasil disimpan');
     }
     public function edit($id_barang){
         $data = Barang::find($id_barang);
         if($data === NULL){
-            return response('data barang tidak ditemukan');
+            return response()->json('data barang tidak ditemukan');
         }else{
             return $data;
         }
@@ -34,23 +34,23 @@ class BarangController extends Controller
     public function update(Request $request){
         $data = Barang::find($request->$id_barang);
         if($data === NULL){
-            return response('data barang yang ingin di update tidak ada');
+            return response()->json('data barang yang ingin di update tidak ada');
         }else{
             $data->nama_barang = $request->json('nama_barang');
             $data->stok = $request->json('stok');
             $data->address_picture = $request->json('address_picture');
             $data->save();
-            return response('data barang berhasil di update',200);
+            return response()->json('data barang berhasil di update',200);
         }
          
     }
     public function delete($id_barang){
         $data = Barang::find($id_barang);
         if($data === NULL){
-            return response('data barang yang ingin dihapus tidak ada');
+            return response()->json('data barang yang ingin dihapus tidak ada');
         }else{
             $data->delete();
-            return response('data barang berhasil di hapus',200);
+            return response()->json('data barang berhasil di hapus',200);
         }  
     }
 
